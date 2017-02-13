@@ -24,11 +24,13 @@ nav {
       text-decoration: none;
       color: $secondary-color;
     }
+
     &:active {
       text-decoration: none;
       color: $secondary-color;
     }
   }
+
   .nav-toggle {
     display: block;
     border-radius: 5px;
@@ -37,36 +39,33 @@ nav {
     height: 30px;
     width: 30px;
     cursor: pointer;
-  }
-  .nav-toggle.open span:first-child {
-    transform: rotate(45deg) translate(4.4px, 4.4px);
+
+    &.open span:first-child {
+      transform: rotate(45deg) translate(4.4px, 4.4px);
+    }
+
+    &.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+
+    &.open span:last-child {
+      transform: rotate(-45deg) translate(4.4px, -4.4px);
+    }
+
+    span {
+      position: relative;
+      display: block;
+      height: 2px;
+      width: 100%;
+      margin-top: 4px;
+      background-color: $secondary-color;
+      transition: all .25s;
+    }
   }
 
-  .nav-toggle.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-
-  .nav-toggle.open span:last-child {
-    transform: rotate(-45deg) translate(4.4px, -4.4px);
-  }
-
-  .nav-toggle span {
-    position: relative;
-    display: block;
-    height: 2px;
-    width: 100%;
-    margin-top: 4px;
-    background-color: $secondary-color;
-    transition: all .25s;
-
-  }
-
-  &.show-nav{
-    height: 30px;
-  }
   &.hide-nav {
-    transform: translateY(-120% !important);
+    transform: translateY(-120%) !important;
     -webkit-transform: translateY(-120%) !important;
   }
 
@@ -74,7 +73,8 @@ nav {
     list-style-type: none;
     margin: 0;
 
-    &.menu{
+    &.menu {
+
       display: block;
       max-height: 0;
       overflow: hidden;
@@ -106,7 +106,6 @@ nav {
       }
     }
   }
-
 }
 
 @font-face {
@@ -154,7 +153,6 @@ section {
       border-bottom: 5px $primary-color solid;
     }
   }
-
 }
 
 .about {
@@ -179,6 +177,21 @@ section {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: inline-block;
+
+      img {
+        width: 4em;
+        height: 4em;
+        padding: 1rem 2rem;
+      }
+    }
+  }
 }
 
 .works {
@@ -236,7 +249,9 @@ section {
 }
 
 footer {
+
   .row {
+
     p {
       text-align: center;
       margin: 0;
@@ -246,13 +261,16 @@ footer {
 }
 
 @media (min-width: 768px) {
+
   h1 {
     font-size: 4rem;
   }
+
   p {
     font-size: 2rem;
     margin: 10%;
   }
+
   nav {
 
     .nav-toggle {
