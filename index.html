@@ -90,19 +90,59 @@
     </div>
 </section>
 <section id="works" class="works">
-    <div class="container">
-        <h1>My works</h1>
+
+    <h1>My works</h1>
+    <div class="works-item">
+        <img src="img/project1.png"/>
+        <div class="overlay">
+            <div class="links">
+            <div class="link">
+                <a href="https://pawell67.github.io/project1/">DEMO</a>
+            </div>
+            <div class="link">
+                <a href="https://github.com/pawell67/project1">CODE</a>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="works-item">
+        <img src="img/project2.png"/>
+        <div class="overlay">
+            <div class="links">
+                <div class="link">
+                    <a href="https://pawell67.github.io/project2/">DEMO</a>
+                </div>
+                <div class="link">
+                    <a href="https://github.com/pawell67/project2">CODE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="works-item">
+        <img src="img/project3.png"/>
+        <div class="overlay">
+            <div class="links">
+                <div class="link">
+                    <a href="https://pawell67.github.io/project3/">DEMO</a>
+                </div>
+                <div class="link">
+                    <a href="https://github.com/pawell67/project3">CODE</a>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section id="contact" class="contact">
     <div class="container">
         <h1>Contact</h1>
-        <form>
+        <form id="contact-form" action="mail.php" method="post">
             <label for="name"></label>
-            <input type="text" id="name" placeholder="Your name"/>
+            <input type="text" id="name" name="name" placeholder="Your name"/>
             <label for="email"></label>
-            <input type="email" id="email" placeholder="Your email"/>
-            <textarea cols="30" rows="8" placeholder="Your message"></textarea>
+            <input type="email" id="email" name="email" placeholder="Your email"/>
+            <textarea cols="30" rows="8" name="message" placeholder="Your message"></textarea>
             <button type="submit" value="">Send</button>
         </form>
     </div>
