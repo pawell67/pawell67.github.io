@@ -7,5 +7,5 @@ $headers = 'From: ' . $name . '(' . $_POST["email"] . ')' \r\n . 'Content-type: 
 mail($to, $name, $message, $headers);
 
 
-echo "dkasodkasod";
+echo "OK!";
 ?>
