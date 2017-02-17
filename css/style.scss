@@ -1,6 +1,33 @@
 $primary-color: #ffffff;
 $secondary-color: #000000;
 
+@font-face {
+  font-family: 'Roboto Slab', serif;
+}
+
+section {
+  padding: 10px 0;
+  color: $primary-color;
+  text-align: center;
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+    margin: 10%;
+  }
+}
+
+a{
+  text-decoration: none;
+  color:$secondary-color;
+
+  &:visited{
+    text-decoration: none;
+    color:$secondary-color;
+  }
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -108,23 +135,6 @@ nav {
   }
 }
 
-@font-face {
-  font-family: 'Roboto Slab', serif;
-}
-
-section {
-  padding: 10px 0;
-  color: $primary-color;
-  text-align: center;
-  h1 {
-    font-size: 2rem;
-  }
-  p {
-    font-size: 1rem;
-    margin: 10%;
-  }
-}
-
 .logo {
   padding: 0;
 }
@@ -157,10 +167,17 @@ section {
 
 .about {
   width: 100%;
-  height: 100vh;
+  min-height: 40vh;
+  max-height: 100vh;
   background-image: url(../img/desk2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  p{
+    font-size:1.25rem;
+    line-height: 110%;
+    margin-bottom:3%;
+  }
 
   .avatar {
     height: 200px;
@@ -172,7 +189,8 @@ section {
 
 .skills {
   width: 100%;
-  height: 100vh;
+  min-height: 40vh;
+  max-height: 100vh;
   background-image: url(../img/desk.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -186,8 +204,8 @@ section {
       display: inline-block;
 
       img {
-        width: 4em;
-        height: 4em;
+        width: 5.5em;
+        height: 5.5em;
         padding: 1rem 2rem;
 
         &:hover {
@@ -202,7 +220,8 @@ section {
 
 .works {
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
+  min-height:50vh;
   background-image: url(../img/desk.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -210,19 +229,20 @@ section {
 
   .works-item {
     display: inline-block;
-    width: 30%;
+    width: 80%;
     overflow: hidden;
     position: relative;
     transition-duration: 250ms;
     transition-timing-function: linear;
     margin: 1rem;
-    max-height: 30%;
+    max-height: 25%;
 
     img {
       width: 100%;
     }
 
     &:hover .overlay {
+      transition: all 1s ease;
       opacity: 1;
     }
 
@@ -258,10 +278,13 @@ section {
             display: block;
             height: 100%;
             width: 100%;
-
             box-sizing: border-box;
             color: $secondary-color;
             padding: 1rem;
+
+            &:hover {
+              background-color: #c0c0c0;
+            }
           }
         }
       }
@@ -271,7 +294,7 @@ section {
 
 .contact {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background-image: url(../img/desk.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -279,25 +302,29 @@ section {
   text-align: center;
 
   input {
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
     margin: 10px auto;
     color: $secondary-color;
     outline: none;
     width: 80%;
+    max-width: 600px;
     display: block;
     border: 1px $secondary-color solid;
+    font-size: 1.25rem;
   }
 
   textarea {
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
     margin: 10px auto;
     color: $secondary-color;
     outline: none;
     width: 80%;
+    max-width: 600px;
     display: block;
     border: 1px $secondary-color solid;
+    font-size: 1.25rem;
   }
 
   button {
@@ -337,10 +364,25 @@ footer {
     margin: 10%;
   }
 
+  .about{
+    p{
+      line-height: 150%;
+      font-size:1.5rem;
+    }
+  }
   nav {
 
     .nav-toggle {
       display: none;
     }
   }
+  .works {
+
+    .works-item {
+      width: 30%;
+      max-height: 100%;
+    }
+  }
+
 }
+

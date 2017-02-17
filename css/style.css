@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Roboto Slab', serif; }
+section {
+  padding: 10px 0;
+  color: #ffffff;
+  text-align: center; }
+  section h1 {
+    font-size: 2rem; }
+  section p {
+    font-size: 1rem;
+    margin: 10%; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+  a:visited {
+    text-decoration: none;
+    color: #000000; }
+
 nav {
   position: fixed;
   top: 0;
@@ -75,18 +94,6 @@ nav {
           text-decoration: none;
           color: #000000; }
 
-@font-face {
-  font-family: 'Roboto Slab', serif; }
-section {
-  padding: 10px 0;
-  color: #ffffff;
-  text-align: center; }
-  section h1 {
-    font-size: 2rem; }
-  section p {
-    font-size: 1rem;
-    margin: 10%; }
-
 .logo {
   padding: 0; }
 
@@ -113,10 +120,15 @@ section {
 
 .about {
   width: 100%;
-  height: 100vh;
+  min-height: 40vh;
+  max-height: 100vh;
   background-image: url(../img/desk2.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
+  .about p {
+    font-size: 1.25rem;
+    line-height: 110%;
+    margin-bottom: 3%; }
   .about .avatar {
     height: 200px;
     width: 200px;
@@ -125,7 +137,8 @@ section {
 
 .skills {
   width: 100%;
-  height: 100vh;
+  min-height: 40vh;
+  max-height: 100vh;
   background-image: url(../img/desk.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -136,8 +149,8 @@ section {
     .skills ul li {
       display: inline-block; }
       .skills ul li img {
-        width: 4em;
-        height: 4em;
+        width: 5.5em;
+        height: 5.5em;
         padding: 1rem 2rem; }
         .skills ul li img:hover {
           -webkit-transform: rotate(360deg);
@@ -146,23 +159,25 @@ section {
 
 .works {
   width: 100%;
-  height: 100vh;
+  max-height: 100vh;
+  min-height: 50vh;
   background-image: url(../img/desk.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover; }
   .works .works-item {
     display: inline-block;
-    width: 30%;
+    width: 80%;
     overflow: hidden;
     position: relative;
     transition-duration: 250ms;
     transition-timing-function: linear;
     margin: 1rem;
-    max-height: 30%; }
+    max-height: 25%; }
     .works .works-item img {
       width: 100%; }
     .works .works-item:hover .overlay {
+      transition: all 1s ease;
       opacity: 1; }
     .works .works-item .overlay {
       opacity: 0;
@@ -196,33 +211,39 @@ section {
             box-sizing: border-box;
             color: #000000;
             padding: 1rem; }
+            .works .works-item .overlay .links .link a:hover {
+              background-color: #c0c0c0; }
 
 .contact {
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   background-image: url(../img/desk.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center; }
   .contact input {
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
     margin: 10px auto;
     color: #000000;
     outline: none;
     width: 80%;
+    max-width: 600px;
     display: block;
-    border: 1px #000000 solid; }
+    border: 1px #000000 solid;
+    font-size: 1.25rem; }
   .contact textarea {
-    padding: 5px;
+    padding: 10px;
     border-radius: 3px;
     margin: 10px auto;
     color: #000000;
     outline: none;
     width: 80%;
+    max-width: 600px;
     display: block;
-    border: 1px #000000 solid; }
+    border: 1px #000000 solid;
+    font-size: 1.25rem; }
   .contact button {
     width: 150px;
     color: #000000;
@@ -247,7 +268,15 @@ footer .row p {
     font-size: 2rem;
     margin: 10%; }
 
+  .about p {
+    line-height: 150%;
+    font-size: 1.5rem; }
+
   nav .nav-toggle {
-    display: none; } }
+    display: none; }
+
+  .works .works-item {
+    width: 30%;
+    max-height: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
