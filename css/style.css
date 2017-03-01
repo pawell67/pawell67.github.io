@@ -100,7 +100,8 @@ nav {
 
 .home {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 200vh;
   background-image: url(../img/coffee2.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -116,7 +117,7 @@ nav {
 .about {
   width: 100%;
   min-height: 40vh;
-  max-height: 160vh;
+  max-height: 360vh;
   background-image: url(../img/desk.jpg);
   background-repeat: no-repeat;
   background-size: cover; }
@@ -134,7 +135,7 @@ nav {
 .skills {
   width: 100%;
   min-height: 40vh;
-  max-height: 200vh;
+  max-height: 360vh;
   background-image: url(../img/desk5.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -155,7 +156,7 @@ nav {
 
 .works {
   width: 100%;
-  max-height: 150vh;
+  max-height: 200vh;
   min-height: 50vh;
   background-image: url(../img/desk5.jpg);
   background-attachment: fixed;
@@ -213,7 +214,7 @@ nav {
 .contact {
   width: 100%;
   min-height: 60vh;
-  max-height: 150vh;
+  max-height: 200vh;
   background-image: url(../img/desk5.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
