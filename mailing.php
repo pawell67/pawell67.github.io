@@ -2,6 +2,7 @@
 require 'PHPMailerAutoload.php';
 $email = $_REQUEST['email'];
 $message =$_REQUEST['message'];
+$subject =$_REQUEST['subject'];
 $name= $_REQUEST['name'];
 
 require_once('class.phpmailer.php');    // dodanie klasy phpmailer
@@ -17,6 +18,7 @@ $mail->Username = "test.email.pawell67@gmail.com";    //nazwa użytkownika do sk
 $mail->Password = "r4u27oadAKcH";    //hasło użytkownika do skrzynki e-mail
 $mail->Port = 587; //port serwera SMTP
 $mail->Body = $message;    //Treść wiadomości, można stosować zmienne i znaczniki HTML
+$mail->Subject = $subject;
 $mail->AltBody = $message;
 $mail->SMTPAutoTLS = false;   //wyłączenie TLS
 $mail->SMTPSecure = 'tls';    //
