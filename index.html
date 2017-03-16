@@ -17,6 +17,7 @@
     <script src="js/typed.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/type.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
 </head>
@@ -36,7 +37,8 @@
     </ul>
 </nav>
 
-<section id="home" class="home">
+
+<section id="home" class="home parallax-window" data-parallax="scroll" data-image-src="img/coffee2.jpg" data-speed="0.4">
     <h1 class="my-name">
     </h1>
 </section>
@@ -179,15 +181,19 @@
 <section id="contact" class="contact">
     <div class="container">
         <h1>Contact</h1>
-        <form id="contact-form" action="mail.php" method="post">
+        <form id="contact-form" action="mailing.php" method="post">
             <label for="name"></label>
             <input type="text" id="name" name="name" placeholder="Your name"/>
             <label for="email"></label>
             <input type="email" id="email" name="email" placeholder="Your email"/>
+            <label for="subject"></label>
+            <input type="text" id="subject" name="subject" placeholder="Subject of message"/>
             <textarea cols="30" rows="10" name="message" placeholder="Your message"></textarea>
+            <div class="g-recaptcha" data-sitekey="6LfP3hcUAAAAAJ1ZzEQq5miF66qcKxvx2qkrkCj8"></div>
             <button type="submit" value="">Send</button>
         </form>
     </div>
+
 </section>
 
 <footer>
@@ -198,6 +204,7 @@
 </footer>
 <!--Scripts-->
 <script src="js/navigation.js"></script>
+<script src="js/parallax.min.js"></script>
 <script src="js/main.js"></script>
 
 </body>

@@ -18,6 +18,11 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-$('.item').on('blur', function () {
-    owl.trigger('play.owl.autoplay', [1000])
+$('.owl-item').on('mouseenter',function(){
+    $(this).closest('.owl-carousel').trigger('stop.owl.autoplay');
 });
+$('.owl-item').on('mouseleave',function(){
+    $(this).closest('.owl-carousel').trigger('play.owl.autoplay',[500]);
+});
+
+$('.parallax-window').parallax({imageSrc: 'img/coffee2.jpg'});

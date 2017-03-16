@@ -130,7 +130,10 @@ nav {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    background-size: cover; }
+    background-size: cover;
+    transition: all .2s ease-in-out; }
+    .about .avatar:hover {
+      transform: scale(1.1); }
 
 .skills {
   width: 100%;
@@ -148,7 +151,8 @@ nav {
       .skills ul li img {
         width: 5.5em;
         height: 5.5em;
-        padding: 1rem 2rem; }
+        padding: 1rem 2rem;
+        transition: all 1s ease-in-out 0s; }
         .skills ul li img:hover {
           -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -300,5 +304,12 @@ footer {
 @media (max-width: 425px) {
   .home .my-name {
     top: 150px; } }
+.g-recaptcha {
+  margin: 0 auto;
+  width: 304px; }
+
+.parallax-window {
+  min-height: 100vh;
+  background: transparent; }
 
 /*# sourceMappingURL=style.css.map */
