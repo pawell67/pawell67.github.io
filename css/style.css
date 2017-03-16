@@ -363,6 +363,16 @@ footer .row p {
     color: #000000;
 }
 
+.g-recaptcha {
+    margin: 0 auto;
+    width: 304px;
+}
+
+.parallax-window {
+    min-height: 100vh;
+    background: transparent;
+}
+
 @media (min-width: 768px) and (max-width: 1048px) {
     h1 {
         font-size: 4rem;
@@ -410,16 +420,6 @@ footer .row p {
     .home .my-name {
         top: 150px;
     }
-}
-
-.g-recaptcha {
-    margin: 0 auto;
-    width: 304px;
-}
-
-.parallax-window {
-    min-height: 100vh;
-    background: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

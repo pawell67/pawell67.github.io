@@ -183,8 +183,8 @@ nav {
     background-size: cover;
     transition: all .2s ease-in-out;
 
-    &:hover{
-      transform:scale(1.1);
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -368,6 +368,16 @@ footer {
   }
 }
 
+.g-recaptcha {
+  margin: 0 auto;
+  width: 304px;
+}
+
+.parallax-window {
+  min-height: 100vh;
+  background: transparent;
+}
+
 @media (min-width: 768px) and (max-width: 1048px) {
 
   h1 {
@@ -429,20 +439,11 @@ footer {
   }
 }
 
-@media (max-width: 425px){
-  .home{
-    .my-name{
-      top:150px;
+@media (max-width: 425px) {
+  .home {
+    .my-name {
+      top: 150px;
     }
   }
 }
 
-.g-recaptcha{
-  margin: 0 auto;
-  width: 304px;
-}
-
-.parallax-window {
-  min-height: 100vh;
-  background: transparent;
-}
